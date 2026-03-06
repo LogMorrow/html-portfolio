@@ -1,0 +1,13 @@
+{
+  "name": "lagos-property-marketplace",
+  "version": "1.0.0",
+  "description": "Full-stack real estate marketplace for Lagos, Nigeria",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "lint": "node --check server.js public/app.js"
+  },
+  "keywords": ["real-estate", "lagos", "marketplace", "seo"],
+  "license": "MIT"
+}
