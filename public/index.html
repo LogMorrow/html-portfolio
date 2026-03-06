@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lagos Property Nexus | Verified Homes, Rentals & Investments</title>
+    <meta
+      name="description"
+      content="Discover verified properties for sale and rent in Lagos, Nigeria. Access investment intelligence, diaspora remote purchase support, and secure inquiry workflows."
+    />
+    <meta name="keywords" content="Lagos properties, Nigeria real estate, diaspora property purchase, verified listings" />
+    <meta property="og:title" content="Lagos Property Nexus" />
+    <meta property="og:description" content="A modern Lagos property marketplace for buyers, renters, investors, and diaspora clients." />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://lagos-property-nexus.example" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="overlay"></div>
+      <div class="hero-content container">
+        <p class="eyebrow">Lagos, Nigeria Real Estate Marketplace</p>
+        <h1>Find Verified Properties. Invest Intelligently. Buy Remotely.</h1>
+        <p>
+          Search high-quality homes, rentals, and commercial assets with verification status,
+          projected ROI, and diaspora-friendly remote purchasing support.
+        </p>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="panel" aria-label="Search and filters">
+        <h2>Search Listings</h2>
+        <form id="search-form" class="grid">
+          <input type="text" id="q" placeholder="Search by area, title, or feature" />
+          <select id="purpose">
+            <option value="">Sale or Rent</option>
+            <option value="sale">For Sale</option>
+            <option value="rent">For Rent</option>
+          </select>
+          <select id="type">
+            <option value="">Any Type</option>
+            <option value="House">House</option>
+            <option value="Apartment">Apartment</option>
+            <option value="Duplex">Duplex</option>
+            <option value="Commercial">Commercial</option>
+          </select>
+          <input type="number" id="minPrice" placeholder="Min Price (₦)" />
+          <input type="number" id="maxPrice" placeholder="Max Price (₦)" />
+          <select id="sort">
+            <option value="relevance">Sort: Relevance</option>
+            <option value="price_asc">Price Low to High</option>
+            <option value="price_desc">Price High to Low</option>
+            <option value="roi_desc">Highest ROI</option>
+          </select>
+          <label><input type="checkbox" id="verified" /> Verified only</label>
+          <label><input type="checkbox" id="diasporaReady" /> Diaspora-ready</label>
+          <button type="submit">Apply Search</button>
+        </form>
+      </section>
+
+      <section class="stats" id="stats"></section>
+
+      <section>
+        <h2>Featured Listings</h2>
+        <div id="listing-count"></div>
+        <div id="properties" class="cards"></div>
+      </section>
+
+      <section class="two-col">
+        <article class="panel">
+          <h2>List a Property</h2>
+          <form id="listing-form">
+            <input required name="title" placeholder="Property title" />
+            <input required name="area" placeholder="Area (e.g., Lekki)" />
+            <input required name="type" placeholder="Type" />
+            <select required name="purpose">
+              <option value="sale">For Sale</option>
+              <option value="rent">For Rent</option>
+            </select>
+            <input required type="number" name="priceNgn" placeholder="Price (₦)" />
+            <input required type="email" name="contactEmail" placeholder="Contact email" />
+            <button type="submit">Submit Listing</button>
+          </form>
+          <p id="listing-feedback"></p>
+        </article>
+
+        <article class="panel">
+          <h2>Send Inquiry</h2>
+          <form id="inquiry-form">
+            <input required name="propertyId" placeholder="Property ID (e.g., lag-001)" />
+            <input required name="name" placeholder="Full name" />
+            <input required type="email" name="email" placeholder="Email" />
+            <input type="number" name="budgetNgn" placeholder="Budget (₦)" />
+            <textarea required name="message" placeholder="Tell us what you need"></textarea>
+            <label><input type="checkbox" name="diasporaBuyer" /> I am buying from outside Nigeria</label>
+            <button type="submit">Send Inquiry</button>
+          </form>
+          <p id="inquiry-feedback"></p>
+        </article>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
